@@ -6,7 +6,7 @@ A plugin to generate a slider in home or blog index page with numerous options.
 ## Features
 This plugin creates an image slider on the website's homepage or blog index page. 
 
-![Slider in home](https://github.com/gpsblues/Publii-Plugin-Front-Slider/blob/main/.assets/screen.gif) 
+![Slider in home](https://github.com/gpsblues/Publii-Plugin-Front-Slider/blob/main/.assets/screen.gif)*Home page slider with three image and static test in Simple3 theme.*
 
 The slider and each individual slide are highly customizable with texts, links, colors, arrows, and navigation buttons.
 
