@@ -8,7 +8,7 @@ This plugin creates an image slider on the website's homepage. The slider and ea
 
 ![Publii plugin screenshot](https://raw.githubusercontent.com/gpsblues/Publii-Plugin-Front-Slider/refs/heads/main/.assets/screen.png)
 
-The slider in this plugin is a Publii adaptation of the [VanillaSlider](https://github.com/rchisholm/vanilla-slider\) by Rusty Chisholm. The original repository offers detailed descriptions of most of the [plugin's options](https://github.com/rchisholm/vanilla-slider?tab=readme-ov-file#options) and showcases several demos.
+The slider in this plugin is a Publii adaptation of the [VanillaSlider](https://github.com/rchisholm/vanilla-slider) by Rusty Chisholm. The original repository offers detailed descriptions of most of the [plugin's options](https://github.com/rchisholm/vanilla-slider?tab=readme-ov-file#options) and showcases several demos.
 
 ## Installation and Usage
 - Download the .zip file of the latest plugin version from the [release page](https://github.com/gpsblues/Publii-Plugin-Front-Slider/releases/).
@@ -45,7 +45,14 @@ Here, you'll find a brief description of the various options. For more details, 
 - PostsPage: insert the slider on the blog index if enabled (Publii 0.46.2 or more).
 
 **Slider Height**  
-Defaults `100vh`. You can also use fixed values in px or include theme variables (make sure these variables exist). Examples of possible values: `600px` | `10rem` | `100vh - var(--navbar-height)` | `100vh - var(--header-height)`. What you type in this field will be enclosed within the CSS `calc()` function.
+Defaults `100vh`.
+You can also use fixed values in px or include theme variables (make sure these variables exist). Examples of possible values: 
+- `600px`
+- `10rem`
+- `100vh - var(--navbar-height)`
+- `100vh - var(--header-height)`
+
+What you type in this field will be enclosed within the CSS `calc()` function.
 
 ### Upload Images 
 **Add Image**  
@@ -63,6 +70,7 @@ This section lets you customize various visual and functional aspects of the sli
 - In placeholder `[PLUGIN-SLIDER]`.
 
 **Custom CSS**
+
 Here you can define custom CSS styles that won't affect other pages of the theme. You can also hide entire sections of the page, for example: `.hero { display: none; }`.
 Let your creativity flow! 
 
