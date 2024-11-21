@@ -1,4 +1,4 @@
-# Publii Plugin Frontpage Slider
+# Publii Plugin Front Slider
 A plugin to generate a homepage slider with numerous options.
 
 <p><img height="100" alt="publii plugin" title="Plugin icons" src="https://raw.githubusercontent.com/gpsblues/Publii-Plugin-Easy-Htaccess/802bbe1ad69aafd209050b19b37371a913fe547f/.assets/thumbnail.svg"></p>
