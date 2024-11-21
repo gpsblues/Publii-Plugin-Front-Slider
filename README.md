@@ -1,12 +1,12 @@
 # Publii Plugin Front Slider
-A plugin to generate a homepage slider with numerous options.
+A plugin to generate a slider in home or blog index page with numerous options.
 
-<p><img height="100" alt="publii plugin" title="Plugin icons" src="https://raw.githubusercontent.com/gpsblues/Publii-Plugin-Easy-Htaccess/802bbe1ad69aafd209050b19b37371a913fe547f/.assets/thumbnail.svg"></p>
+<p><img height="100" alt="publii plugin" title="Plugin icons" src="https://raw.githubusercontent.com/gpsblues/Publii-Plugin-Front-Slider/24497542212de6d654b98e36bbc65b7d541023c6/.assets/thumbnail.svg"></p>
 
 ## Features
 This plugin creates an image slider on the website's homepage. The slider and each individual slide are highly customizable with texts, links, colors, arrows, and navigation buttons.
 
-![Publii plugin screenshot](https://raw.githubusercontent.com/gpsblues/Publii-Plugin-Easy-Htaccess/refs/heads/main/.assets/screen.png)
+![Publii plugin screenshot](https://raw.githubusercontent.com/gpsblues/Publii-Plugin-Front-Slider/refs/heads/main/.assets/screen.png)
 
 The slider in this plugin is a Publii adaptation of the [VanillaSlider](https://github.com/rchisholm/vanilla-slider\) by Rusty Chisholm. The original repository offers detailed descriptions of most of the [plugin's options](https://github.com/rchisholm/vanilla-slider?tab=readme-ov-file#options) and showcases several demos.
 
@@ -72,4 +72,4 @@ This plugin is an unofficial extension for the [Publii CMS](https://getpublii.co
 For official Publii resources, please visit the [Publii CMS Official Repository](https://marketplace.getpublii.com/plugins/).
 
 ## Credits
-[VanillaSlider](https://github.com/rchisholm/vanilla-slider\) by Rusty Chisholm.
+[VanillaSlider](https://github.com/rchisholm/vanilla-slider) by Rusty Chisholm.
