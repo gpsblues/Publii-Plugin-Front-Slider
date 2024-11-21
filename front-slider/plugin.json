@@ -1,0 +1,661 @@
+{
+    "name": "Front Slider",
+    "description": "",
+    "license": "GPL-3.0",
+    "author": "Vittorio Ramponi - www.mywebpassion.it",
+    "version": "1.0.0",
+    "scope": "site",
+    "minimumPubliiVersion": "0.46.0",
+    "usePluginSettingsView": false,
+    "useCustomCssForOptions": false,
+    "assets": {
+        "front": [
+            "vanilla-slider-publii.min.js"
+        ]
+    },
+    "messageInOptions": {
+        "type": "info",
+        "text": "This plugin generates a slider on the homepage with numerous customizable options."
+    },
+    "settingsDisplay": "fieldsets",
+    "config": [
+        {
+            "name": "separator",
+            "label": "",
+            "type": "separator",
+            "group": "",
+            "size": "no-line",
+            "note": "The plugin is based on the GitHub repository <strong>VanillaSlider</strong> by Rusty Chisholm. Visit the page <a href=''>VanillaSlider Options</a> for a detailed description of each option. Additional information for use in Publii is available on <a href='https://github.com/gpsblues/Publii-Plugin-Front-Slider'>this plugin's repository</a>."
+        },
+        {
+            "name": "destination",
+            "label": "Destination",
+            "group": "Setup",
+            "value": "front",
+            "type": "select",
+            "width": 50,
+            "note": "Show the slider on the <strong>FrontPage</strong> or <strong>PostsPage</strong> (if supported in the theme)",
+            "options": [
+                {
+                    "label": "Front Page",
+                    "value": "front"
+                },
+                {
+                    "label": "Posts Page",
+                    "value": "posts"
+                }
+            ]
+        },
+        {
+            "name": "sliderH",
+            "label": "Slider height",
+            "type": "text",
+            "value": "100vh",
+            "group": "Setup",
+            "note": "Theme variable are also supported:<br>100vh | 500px | 100vh - var(--navbar-height) | 100vh - var(--header-height) etc."
+        },
+        {
+            "name": "showControl1",
+            "label": "Expand",
+            "group": "Upload images",
+            "value": true,
+            "note": "shows or hides this section for an extended or compact view",
+            "type": "checkbox"
+        },
+        {
+            "name": "imageSlider",
+            "label": "",
+            "group": "Upload images",
+            "type": "repeater",
+            "value": [],
+            "hasEmptyState": false,
+            "hideLabels": false,
+            "translations": {
+                "addItem": "Add Image",
+                "duplicateItem": "Duplicate",
+                "emptyState": "Click the button below to add a new image to your slider.",
+                "removeItem": "Delete image"
+            },
+            "note": "",
+            "structure": [
+                {
+                    "name": "image",
+                    "label": "Image",
+                    "type": "upload",
+                    "value": "",
+                    "width": 100
+                },
+                {
+                    "name": "textTitle",
+                    "label": "Text title",
+                    "type": "text",
+                    "value": "",
+                    "note": "title for the text overlay placed on the slide",
+                    "width": 50
+                },
+                {
+                    "name": "textBody",
+                    "label": "Text Body",
+                    "type": "text",
+                    "value": "",
+                    "note": "body for the text overlay placed on the slide",
+                    "width": 50
+                },
+                {
+                    "name": "linkUrl",
+                    "label": "Link URL",
+                    "type": "url",
+                    "value": "",
+                    "note": "URL of the link to be placed on the slide",
+                    "width": 100
+                },
+                {
+                    "name": "textPosition",
+                    "label": "Text position",
+                    "value": "SW",
+                    "type": "dropdown",
+                    "options": [
+                        {
+                            "label": "SW",
+                            "value": "SW"
+                        },
+                        {
+                            "label": "NW",
+                            "value": "NW"
+                        },
+                        {
+                            "label": "NE",
+                            "value": "NE"
+                        },
+                        {
+                            "label": "SE",
+                            "value": "SE"
+                        }
+                    ],
+                    "note": "position for text overlay",
+                    "width": 50
+                },
+                {
+                    "name": "linkNewTab",
+                    "label": "Target link",
+                    "value": false,
+                    "type": "dropdown",
+                    "options": [
+                        {
+                            "label": "Same browser tab",
+                            "value": false
+                        },
+                        {
+                            "label": "New browser tab",
+                            "value": true
+                        }
+                    ],
+                    "note": "target link for Link URL",
+                    "width": 50
+                },
+                {
+                    "name": "alt",
+                    "label": "alt",
+                    "type": "text",
+                    "value": "",
+                    "note": "image alt attribute",
+                    "width": 50
+                },
+                {
+                    "name": "title",
+                    "label": "title",
+                    "type": "text",
+                    "value": "",
+                    "note": "image title attribute",
+                    "width": 50
+                }
+            ],
+            "dependencies": [
+                {
+                    "field": "showControl1",
+                    "value": true
+                }
+            ]
+        },
+        {
+            "name": "separator",
+            "label": "",
+            "type": "separator",
+            "group": "Static text",
+            "size": "no-line",
+            "note": "This static text will overwrite the text of individual slider images. If you prefer a separate text for each image, leave these fields empty."
+        },
+        {
+            "name": "showControl2",
+            "label": "Expand",
+            "group": "Static text",
+            "value": true,
+            "note": "shows or hides this section for an extended or compact view",
+            "type": "checkbox"
+        },
+        {
+            "name": "staticTextTitle",
+            "label": "Text title",
+            "type": "text",
+            "group": "Static text",
+            "placeholder": "",
+            "value": "",
+            "note": "static text title to overlay on slider (if any)",
+            "dependencies": [
+                {
+                    "field": "showControl2",
+                    "value": true
+                }
+            ]
+        },
+        {
+            "name": "staticTextBody",
+            "label": "Text body",
+            "type": "textarea",
+            "group": "Static text",
+            "placeholder": "",
+            "value": "",
+            "note": "static text body to overlay on slider (if any)",
+            "dependencies": [
+                {
+                    "field": "showControl2",
+                    "value": true
+                }
+            ]
+        },
+        {
+            "name": "staticTextPosition",
+            "label": "Text position",
+            "group": "Static text",
+            "value": "SW",
+            "type": "select",
+            "options": [
+                {
+                    "label": "SW",
+                    "value": "SW"
+                },
+                {
+                    "label": "NW",
+                    "value": "NW"
+                },
+                {
+                    "label": "NE",
+                    "value": "NE"
+                },
+                {
+                    "label": "SE",
+                    "value": "SE"
+                }
+            ],
+            "note": "position for static text",
+            "dependencies": [
+                {
+                    "field": "showControl2",
+                    "value": true
+                }
+            ]
+        },
+        {
+            "name": "textColor",
+            "label": "Text color",
+            "group": "Static text",
+            "value": "#ffffff",
+            "type": "colorpicker",
+            "note": "text color",
+            "dependencies": [
+                {
+                    "field": "showControl2",
+                    "value": true
+                }
+            ]
+        },
+        {
+            "name":"separator",
+            "label": "",
+            "note":"<strong>Text overlay options</strong>",
+            "group": "Static text",
+            "type":"separator",
+            "size":"thin",
+            "dependencies": [
+                {
+                    "field": "showControl2",
+                    "value": true
+                }
+            ]
+        },
+        {
+            "name": "textBgColor",
+            "label": "Background color",
+            "group": "Static text",
+            "value": "rgba(0,0,0,.2)",
+            "type": "colorpicker",
+            "note": "text background color",
+            "dependencies": [
+                {
+                    "field": "showControl2",
+                    "value": true
+                }
+            ]
+        },
+        {
+            "name": "textPadding",
+            "label": "Padding",
+            "type": "text",
+            "group": "Static text",
+            "placeholder": "20px",
+            "value": "20px",
+            "note": "text padding into overlay",
+            "dependencies": [
+                {
+                    "field": "showControl2",
+                    "value": true
+                }
+            ]
+        },
+        {
+            "name": "textLeftRight",
+            "label": "Margin x",
+            "type": "text",
+            "group": "Static text",
+            "placeholder": "40px",
+            "value": "40px",
+            "note": "left or right margin",
+            "dependencies": [
+                {
+                    "field": "showControl2",
+                    "value": true
+                }
+            ]
+        },
+        {
+            "name": "textTopBottom",
+            "label": "Margin y",
+            "type": "text",
+            "group": "Static text",
+            "placeholder": "40px",
+            "value": "40px",
+            "note": "top or bottom margin",
+            "dependencies": [
+                {
+                    "field": "showControl2",
+                    "value": true
+                }
+            ]
+        },
+        {
+            "name": "showControl3",
+            "label": "Expand",
+            "group": "Slider options",
+            "value": true,
+            "note": "shows or hides this section for an extended or compact view",
+            "type": "checkbox"
+        },
+        {
+            "name": "transitionTime",
+            "label": "Transition time",
+            "group": "Slider options",
+            "value": 1000,
+            "type": "range",
+            "min": 0,
+            "max": 10000,
+            "step": 500,
+            "note": "time in ms until transition is finished",
+            "dependencies": [
+                {
+                    "field": "showControl3",
+                    "value": true
+                }
+            ]
+        },
+        {
+            "name": "transitionDirectionX",
+            "label": "Transition X",
+            "group": "Slider options",
+            "value": "null",
+            "type": "select",
+            "width": 50,
+            "note": "x direction for fading out element to move",
+            "options": [
+                {
+                    "label": "Null",
+                    "value": "null"
+                },
+                {
+                    "label": "Left",
+                    "value": "left"
+                },
+                {
+                    "label": "Right",
+                    "value": "right"
+                },
+                {
+                    "label": "Random",
+                    "value": "random"
+                }
+            ],
+            "dependencies": [
+                {
+                    "field": "showControl3",
+                    "value": true
+                }
+            ]
+        },
+        {
+            "name": "transitionDirectionY",
+            "label": "Transition Y",
+            "group": "Slider options",
+            "value": "null",
+            "type": "select",
+            "note": "y direction for fading out element to move",
+            "options": [
+                {
+                    "label": "Null",
+                    "value": "null"
+                },
+                {
+                    "label": "Up",
+                    "value": "up"
+                },
+                {
+                    "label": "Down",
+                    "value": "down"
+                },
+                {
+                    "label": "Random",
+                    "value": "random"
+                }
+            ],
+            "dependencies": [
+                {
+                    "field": "showControl3",
+                    "value": true
+                }
+            ]
+        },
+        {
+            "name": "transitionZoom",
+            "label": "Transition zoom",
+            "group": "Slider options",
+            "value": "null",
+            "type": "select",
+            "note": "direction for zooming the fading out element",
+            "options": [
+                {
+                    "label": "Null",
+                    "value": "null"
+                },
+                {
+                    "label": "In",
+                    "value": "in"
+                },
+                {
+                    "label": "Out",
+                    "value": "out"
+                },
+                {
+                    "label": "Random",
+                    "value": "random"
+                }
+            ],
+            "dependencies": [
+                {
+                    "field": "showControl3",
+                    "value": true
+                }
+            ]
+        },
+        {
+            "name": "bullets",
+            "label": "Show bullets",
+            "group": "Slider options",
+            "value": false,
+            "note": "whether to show bullets",
+            "type": "checkbox",
+            "dependencies": [
+                {
+                    "field": "showControl3",
+                    "value": true
+                }
+            ]
+        },
+        {
+            "name": "bulletsHide",
+            "label": "  ⊢ Bullets mouse out",
+            "group": "Slider options",
+            "value": true,
+            "type": "checkbox",
+            "note": "whether to hide bullets on mouse out",
+            "dependencies": [
+                {
+                    "field": "showControl3",
+                    "value": true
+                }
+            ]
+        },
+        {
+            "name": "bulletColor",
+            "label": "  ⊢ Bullets color",
+            "group": "Slider options",
+            "value": "#BA1A1A",
+            "type": "colorpicker",
+            "note": "color of active bullet",
+            "dependencies": [
+                {
+                    "field": "showControl3",
+                    "value": true
+                }
+            ]
+        },
+        {
+            "name": "arrows",
+            "label": "Show arrows",
+            "group": "Slider options",
+            "value": true,
+            "note": "whether to show arrows",
+            "type": "checkbox",
+            "dependencies": [
+                {
+                    "field": "showControl3",
+                    "value": true
+                }
+            ]
+        },
+        {
+            "name": "arrowsHide",
+            "label": "  ⊢ Arrows mouse out",
+            "group": "Slider options",
+            "value": true,
+            "type": "checkbox",
+            "note": "whether to hide arrow on mouse out",
+            "dependencies": [
+                {
+                    "field": "showControl3",
+                    "value": true
+                }
+            ]
+        },
+        {
+            "name": "swipe",
+            "label": "Swipe support",
+            "group": "Slider options",
+            "value": true,
+            "note": "whether to allow swipe support",
+            "type": "checkbox",
+            "dependencies": [
+                {
+                    "field": "showControl3",
+                    "value": true
+                }
+            ]
+        },
+        {
+            "name": "auto",
+            "label": "Auto move",
+            "group": "Slider options",
+            "value": false,
+            "note": "whether to automatically move slides",
+            "type": "checkbox",
+            "dependencies": [
+                {
+                    "field": "showControl3",
+                    "value": true
+                }
+            ]
+        },
+        {
+            "name": "autoTime",
+            "label": "  ⊢ Auto time",
+            "group": "Slider options",
+            "value": "5000",
+            "type": "range",
+            "min": 0,
+            "max": 10000,
+            "step": 500,
+            "note": "time in ms for slides to automatically move",
+            "dependencies": [
+                {
+                    "field": "showControl3",
+                    "value": true
+                }
+            ]
+        },
+        {
+            "name": "autoPauseOnHover",
+            "label": "  ⊢ Auto pause",
+            "group": "Slider options",
+            "value": true,
+            "type": "checkbox",
+            "note": "whether to pause auto when hovering",
+            "dependencies": [
+                {
+                    "field": "showControl3",
+                    "value": true
+                }
+            ]
+        },
+        {
+            "name": "sliderPosition",
+            "label": "Slider position",
+            "group": "Advanced",
+            "value": "1",
+            "type": "select",
+            "note": "Specify where to insert the following HTML structure of the slider:<br>&lt;section class=&quot;home-slider&quot;&gt;<br>    &lt;div id=&quot;slider-01&quot;&gt;&lt;/div&gt;<br>&lt;/section&gt;",
+            "options": [
+                {
+                    "label": "<main> HTML tag",
+                    "value": "1"
+                },
+                {
+                    "label": "[PLUGIN-SLIDER] label",
+                    "value": "2"
+                }
+            ]
+        },
+        {
+            "name": "separator",
+            "label": "",
+            "type": "separator",
+            "group": "Advanced",
+            "size": "no-line",
+            "note": "The slider is placed in a section immediately below the <strong>&lt;main&gt;</strong> tag, preserving any existing classes. With this option, there's no need to modify the homepage .hbs files; just ensure that the <strong>&lt;main&gt;</strong> tag exists. CSS style customization might be required.",
+            "dependencies": [
+                {
+                    "field": "sliderPosition",
+                    "value": "1"
+                }
+            ]
+        },
+        {
+            "name": "separator",
+            "label": "",
+            "type": "separator",
+            "group": "Advanced",
+            "size": "no-line",
+            "note": "The slider is placed in a custom position defined by the <strong>[PLUGIN-SLIDER]</strong> label. The  <strong>[PLUGIN-SLIDER]</strong> label is replaced with the section containing the slider. With this option, you need to modify the homepage .hbs files by inserting <strong>[PLUGIN-SLIDER]</strong> in the desired location. CSS style customization might be required.",
+            "dependencies": [
+                {
+                    "field": "sliderPosition",
+                    "value": "2"
+                }
+            ]
+        },
+        {
+            "name": "customCSS",
+            "label": "Custom CSS",
+            "type": "textarea",
+            "spellcheck": false,
+            "value": "header.top {z-index: 20;}",
+            "rows": 10,
+            "group": "Advanced",
+            "note": "Place your CSS code here. The !important declaration is often necessary to override the slider settings.<br>E.g: <strong>.vanilla-slider-arrow {text-shadow: none !important;}</strong>"
+        },
+        {
+            "name": "separator",
+            "label": "",
+            "type": "separator",
+            "group": "Credits",
+            "size": "no-line",
+            "note": "This plugin uses the <a href=\"https://github.com/rchisholm/vanilla-slider\">VanillaSlider</a> repository created by Rusty Chisholm."
+        }
+    ]
+}
