@@ -72,6 +72,7 @@ This section lets you customize various visual and functional aspects of the sli
 #### Slider position
 - Below the **`<main>`** tag
 - In placeholder **`[PLUGIN-SLIDER]`**
+
 The second option involves modifying the `.hbs` files of the theme.
 
 #### Custom CSS
