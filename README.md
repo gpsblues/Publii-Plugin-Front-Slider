@@ -1,5 +1,5 @@
 # Publii Plugin Front Slider
-A plugin to generate a slider in home or blog index page with numerous options.
+A plugin to generate a slider in **homepage** or **blog index page** with numerous options.
 
 <p><img height="100" alt="publii plugin" title="Plugin icons" src="https://raw.githubusercontent.com/gpsblues/Publii-Plugin-Front-Slider/24497542212de6d654b98e36bbc65b7d541023c6/.assets/thumbnail.svg"></p>
 
@@ -44,11 +44,11 @@ Since themes can vary greatly from one another, in both cases, manual adjustment
 Here, you'll find a brief description of the various options. For more details, you can refer to the [VanillaSlider page](https://github.com/rchisholm/vanilla-slider?tab=readme-ov-file#options).
 
 ### Setup
-**Destination**
+#### Destination
 - FrontPage: insert the slider on the home page.
 - PostsPage: insert the slider on the blog index if enabled (Publii 0.46.2 or more).
 
-**Slider Height**  
+#### Slider Height  
 Defaults `100vh`.
 You can also use fixed values in px or include theme variables (make sure these variables exist). Examples of possible values: 
 - `600px`
@@ -59,7 +59,7 @@ You can also use fixed values in px or include theme variables (make sure these 
 What you type in this field will be enclosed within the CSS `calc()` function.
 
 ### Upload Images 
-**Add Image**  
+#### Add Image
 A repeater control allows you to add as many images as you like. For each image, you can specify custom text, destination links, and SEO options.  
 
 ### Static Text  
@@ -69,12 +69,12 @@ Static text is an overlay displayed on the slider. Its presence overrides the te
 This section lets you customize various visual and functional aspects of the slider, including colors, buttons, autoplay, fade effects, [and more](https://github.com/rchisholm/vanilla-slider?tab=readme-ov-file#options).  
 
 ### Advanced  
-**Slider position**
-- Below the `<main>` tag
-- In placeholder `[PLUGIN-SLIDER]`.
+#### Slider position
+- Below the **`<main>`** tag
+- In placeholder **`[PLUGIN-SLIDER]`**
+The second option involves modifying the `.hbs` files of the theme.
 
-**Custom CSS**
-
+#### Custom CSS
 Here you can define custom CSS styles that won't affect other pages of the theme. You can also hide entire sections of the page, for example: `.hero { display: none; }`.
 Let your creativity flow! 
 
