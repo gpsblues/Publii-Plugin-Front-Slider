@@ -35,7 +35,7 @@ From the **Advanced** section, the snippet can be inserted in two ways:
 1. **Automatically after the `<main>` tag**  
    This is the default option, which doesn’t require modifying the `.hbs` file. However, you must ensure that the `<main>` tag exists in the theme.  
 
-2. **In a custom position**  
+2. **In `[PLUGIN-SLIDER]` custom position**  
    With this option, you need to manually edit the `.hbs` file by adding the `[PLUGIN-SLIDER]` placeholder where you want the slider to appear.  
 
 Since themes can vary greatly from one another, in both cases, manual adjustments to the CSS styles may be necessary.
@@ -45,8 +45,8 @@ Here, you'll find a brief description of the various options. For more details, 
 
 ### Setup
 #### Destination
-- FrontPage: insert the slider on the home page.
-- PostsPage: insert the slider on the blog index if enabled (Publii 0.46.2 or more).
+- **FrontPage**: insert the slider on the home page.
+- **PostsPage**: insert the slider on the blog index if enabled (Publii 0.46.2 or more).
 
 #### Slider Height  
 Defaults `100vh`.
