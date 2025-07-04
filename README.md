@@ -1,7 +1,7 @@
 # Publii Plugin Front Slider
 A plugin to generate a slider in **homepage** or **blog index page** with numerous options.
 
-<p><img height="100" alt="publii plugin" title="Plugin icons" src="https://raw.githubusercontent.com/gpsblues/Publii-Plugin-Front-Slider/24497542212de6d654b98e36bbc65b7d541023c6/.assets/thumbnail.svg"></p>
+<p><img height="100" style="height:100px;" alt="publii plugin" title="Plugin icons" src="https://raw.githubusercontent.com/gpsblues/Publii-Plugin-Front-Slider/24497542212de6d654b98e36bbc65b7d541023c6/.assets/thumbnail.svg"></p>
 
 ## Features
 This plugin creates an image slider on the website's homepage or blog index page. 
