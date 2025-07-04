@@ -14,6 +14,8 @@ The slider and each individual slide are highly customizable with texts, links, 
 
 The slider in this plugin is a Publii adaptation of the [VanillaSlider](https://github.com/rchisholm/vanilla-slider) by Rusty Chisholm. The original repository offers detailed descriptions of most of the [plugin's options](https://github.com/rchisholm/vanilla-slider?tab=readme-ov-file#options) and showcases several demos.
 
+If you use this plugin, consider giving it a ⭐ on GitHub: it's the only way for me to know if this work is appreciated. Thank you!
+
 ## Installation and Usage
 - Download the .zip file of the latest plugin version from the [release page](https://github.com/gpsblues/Publii-Plugin-Front-Slider/releases/).
 - Open Publii CMS and [install the plugin](https://getpublii.com/docs/plugins.html#installingplugins).
